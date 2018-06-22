@@ -111,7 +111,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Leetcode_1.cpp" />
+    <ClCompile Include="LeetCode_26.cpp" />
     <ClCompile Include="Leetcode_35.cpp" />
+    <ClCompile Include="LeetCode_66.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
