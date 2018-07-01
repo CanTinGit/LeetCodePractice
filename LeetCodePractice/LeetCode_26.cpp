@@ -72,32 +72,32 @@ public:
 
 };
 
-int main() {
-	vector<int> nums;
-	nums.push_back(0);
-	nums.push_back(0);
-	nums.push_back(1);
-	nums.push_back(1);
-	nums.push_back(1);
-	nums.push_back(2);
-	nums.push_back(2);
-	nums.push_back(3);
-	nums.push_back(3);
-	nums.push_back(4);
-
-	//std::vector<int>::iterator it = nums.begin()+1;
-	//nums.erase(it);
-
-	int ret = Solution().removeDuplicates(nums);
-	nums.resize(ret);
-
-	for (auto i = nums.begin(); i != nums.end(); i++) 
-	{
-		cout << *i << " ";
-	}
-	int j;
-	cin >> j;
-	return 0;
-}
+//int main() {
+//	vector<int> nums;
+//	nums.push_back(0);
+//	nums.push_back(0);
+//	nums.push_back(1);
+//	nums.push_back(1);
+//	nums.push_back(1);
+//	nums.push_back(2);
+//	nums.push_back(2);
+//	nums.push_back(3);
+//	nums.push_back(3);
+//	nums.push_back(4);
+//
+//	//std::vector<int>::iterator it = nums.begin()+1;
+//	//nums.erase(it);
+//
+//	int ret = Solution().removeDuplicates(nums);
+//	nums.resize(ret);
+//
+//	for (auto i = nums.begin(); i != nums.end(); i++) 
+//	{
+//		cout << *i << " ";
+//	}
+//	int j;
+//	cin >> j;
+//	return 0;
+//}
 
 //Result: Pass
