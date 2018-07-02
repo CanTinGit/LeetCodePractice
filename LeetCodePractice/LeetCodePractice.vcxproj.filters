@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Array">
       <UniqueIdentifier>{4fce879e-4ccb-4d58-95e6-911ac12ebf5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Math">
+      <UniqueIdentifier>{0a7278fa-c79f-4a60-a3c5-93c9f3c3de77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Leetcode_1.cpp">
@@ -38,6 +41,9 @@
     </ClCompile>
     <ClCompile Include="LeetCode_88.cpp">
       <Filter>Source Files\Array</Filter>
+    </ClCompile>
+    <ClCompile Include="LeetCode_7.cpp">
+      <Filter>Source Files\Math</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

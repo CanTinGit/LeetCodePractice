@@ -69,7 +69,7 @@ public:
 
 	}
 };
-
+/*
 // least time solution
 class Solution {
 public:
@@ -87,7 +87,7 @@ public:
 		}
 	}
 	// easier to understand
-	/*	it's checking (i>=0) and (nums1[i] > nums2[j] ), if both true, nums1[tar] = nums1[i], if not , nums1[tar] = nums2[j];
+	//	it's checking (i>=0) and (nums1[i] > nums2[j] ), if both true, nums1[tar] = nums1[i], if not , nums1[tar] = nums2[j];
 	void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 		int i = m - 1, j = n - 1, tar = m + n - 1;
 		while (j >= 0) {
@@ -99,35 +99,35 @@ public:
 			}
 		}
 	}
-	*/
-
-};
 
 
+};	*/
 
-int main() {
-	vector<int> nums1;
-	vector<int> nums2;
-	nums1.push_back(1);
-	nums1.push_back(2);
-	nums1.push_back(3);
-	nums1.push_back(0);
-	nums1.push_back(0);
-	nums1.push_back(0);
-	nums2.push_back(2);
-	nums2.push_back(5);
-	nums2.push_back(6);
 
-	//std::vector<int>::iterator it = nums.begin()+1;
-	//nums.erase(it);
-
-	Solution().merge(nums1,3,nums2,3);
-
-	for (auto i = nums1.begin(); i != nums1.end(); i++) 
-	{
-		cout << *i << " ";
-	}
-	int j;
-	cin >> j;
-	return 0;
-}
+//
+//int main() {
+//	vector<int> nums1;
+//	vector<int> nums2;
+//	nums1.push_back(1);
+//	nums1.push_back(2);
+//	nums1.push_back(3);
+//	nums1.push_back(0);
+//	nums1.push_back(0);
+//	nums1.push_back(0);
+//	nums2.push_back(2);
+//	nums2.push_back(5);
+//	nums2.push_back(6);
+//
+//	//std::vector<int>::iterator it = nums.begin()+1;
+//	//nums.erase(it);
+//
+//	Solution().merge(nums1,3,nums2,3);
+//
+//	for (auto i = nums1.begin(); i != nums1.end(); i++) 
+//	{
+//		cout << *i << " ";
+//	}
+//	int j;
+//	cin >> j;
+//	return 0;
+//}
