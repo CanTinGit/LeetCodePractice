@@ -14,18 +14,18 @@ nums2 = [2,5,6],       n = 3
 Output: [1,2,2,3,5,6]
 */
 #include <iostream>
-#include<sstream>
-#include <string>
-#include<vector>
+#include <vector>
 #include <algorithm>
 using namespace std;
+// My solution - take too much time - O(n^2)
 class Solution {
 public:
 	void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
 		int cur = 0;
+		int max = m;
 		for (int i = 0; i<n; i++)
 		{
-			if (cur > m && cur < m + n)
+			if (cur > m - 1 && cur < m + n)
 			{
 				nums1[cur] = nums2[i];
 				cur++;
@@ -33,7 +33,7 @@ public:
 			}
 			int result = BinarySearch(nums1, cur, m, nums2[i]);
 			cur = result;
-			if (cur >= m)
+			if (cur > m - 1)
 			{
 				nums1[cur] = nums2[i];
 				cur++;
@@ -41,15 +41,16 @@ public:
 			else
 			{
 				nums1.insert(nums1.begin() + cur, nums2[i]);
+				m++;
 			}
 		}
-		nums1.resize(m + n);
+		nums1.resize(max + n);
 	}
 
 	int BinarySearch(vector<int>& nums, int mn, int m, int target)
 	{
 		int min = mn;
-		int max = m;
+		int max = m - 1;
 		while (!(max < min))
 		{
 			int mid = (min + max) / 2;
@@ -69,69 +70,64 @@ public:
 	}
 };
 
-void trimLeftTrailingSpaces(string &input) {
-	input.erase(input.begin(), find_if(input.begin(), input.end(), [](int ch) {
-		return !isspace(ch);
-	}));
-}
-
-void trimRightTrailingSpaces(string &input) {
-	input.erase(find_if(input.rbegin(), input.rend(), [](int ch) {
-		return !isspace(ch);
-	}).base(), input.end());
-}
-
-vector<int> stringToIntegerVector(string input) {
-	vector<int> output;
-	trimLeftTrailingSpaces(input);
-	trimRightTrailingSpaces(input);
-	input = input.substr(1, input.length() - 2);
-	stringstream ss;
-	ss.str(input);
-	string item;
-	char delim = ',';
-	while (getline(ss, item, delim)) {
-		output.push_back(stoi(item));
+// least time solution
+class Solution {
+public:
+	void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+		int pos = m + n - 1;
+		--m; --n;
+		while (m >= 0 && n >= 0) {
+			if (nums1[m] > nums2[n]) {
+				nums1[pos--] = nums1[m--];
+			}
+			else nums1[pos--] = nums2[n--];
+		}
+		while (n >= 0) {
+			nums1[pos--] = nums2[n--];
+		}
 	}
-	return output;
-}
-
-int stringToInteger(string input) {
-	return stoi(input);
-}
-
-string integerVectorToString(vector<int> list, int length = -1) {
-	if (length == -1) {
-		length = list.size();
+	// easier to understand
+	/*	it's checking (i>=0) and (nums1[i] > nums2[j] ), if both true, nums1[tar] = nums1[i], if not , nums1[tar] = nums2[j];
+	void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+		int i = m - 1, j = n - 1, tar = m + n - 1;
+		while (j >= 0) {
+			if (i >= 0) {
+				nums1[tar--] = nums2[j] > nums1[i] ? nums2[j--] : nums1[i--];
+			}
+			else {
+				nums1[tar--] = nums2[j--];
+			}
+		}
 	}
+	*/
 
-	if (length == 0) {
-		return "[]";
-	}
+};
 
-	string result;
-	for (int index = 0; index < length; index++) {
-		int number = list[index];
-		result += to_string(number) + ", ";
-	}
-	return "[" + result.substr(0, result.length() - 2) + "]";
-}
+
 
 int main() {
-	string line;
-	while (getline(cin, line)) {
-		vector<int> nums1 = stringToIntegerVector(line);
-		getline(cin, line);
-		int m = stringToInteger(line);
-		getline(cin, line);
-		vector<int> nums2 = stringToIntegerVector(line);
-		getline(cin, line);
-		int n = stringToInteger(line);
+	vector<int> nums1;
+	vector<int> nums2;
+	nums1.push_back(1);
+	nums1.push_back(2);
+	nums1.push_back(3);
+	nums1.push_back(0);
+	nums1.push_back(0);
+	nums1.push_back(0);
+	nums2.push_back(2);
+	nums2.push_back(5);
+	nums2.push_back(6);
 
-		Solution().merge(nums1, m, nums2, n);
+	//std::vector<int>::iterator it = nums.begin()+1;
+	//nums.erase(it);
 
-		string out = integerVectorToString(nums1);
-		cout << out << endl;
+	Solution().merge(nums1,3,nums2,3);
+
+	for (auto i = nums1.begin(); i != nums1.end(); i++) 
+	{
+		cout << *i << " ";
 	}
+	int j;
+	cin >> j;
 	return 0;
 }
