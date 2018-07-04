@@ -108,8 +108,8 @@ public:
 			: neg ? -result : result;
 	}
 };
-
-int main ()
-{
-	Solution().reverse(10);
-}
+//
+//int main ()
+//{
+//	Solution().reverse(10);
+//}
