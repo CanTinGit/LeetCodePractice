@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{E5F97169-6BDA-45AE-B84D-908F46F097F0}</ProjectGuid>
     <RootNamespace>LeetCodePractice</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -112,6 +112,9 @@
   <ItemGroup>
     <ClCompile Include="Leetcode_1.cpp" />
     <ClCompile Include="LeetCode_13.cpp" />
+    <ClCompile Include="LeetCode_14.cpp" />
+    <ClCompile Include="LeetCode_20.cpp" />
+    <ClCompile Include="LeetCode_21.cpp" />
     <ClCompile Include="LeetCode_26.cpp" />
     <ClCompile Include="LeetCode_27.cpp" />
     <ClCompile Include="Leetcode_35.cpp" />

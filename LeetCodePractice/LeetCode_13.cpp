@@ -119,8 +119,8 @@ public:
 	//	return res;
 	//}
 };
-int main()
-{
-	bool result = Solution().romanToInt("LVI");
-	std::cout << result << std::endl;
-}
+//int main()
+//{
+//	bool result = Solution().romanToInt("LVI");
+//	std::cout << result << std::endl;
+//}

@@ -57,8 +57,8 @@ public:
 	//	return (x == sum) || (x == sum / 10);
 	//}
 };
-int main()
-{
-	bool result = Solution().isPalindrome(10);
-	std::cout << result << std::endl;
-}
+//int main()
+//{
+//	bool result = Solution().isPalindrome(10);
+//	std::cout << result << std::endl;
+//}
