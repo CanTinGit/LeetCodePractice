@@ -131,8 +131,8 @@ public:
 	//}
 };
 
-void main()
-{
-	Solution().isValid("()");
-}
+//void main()
+//{
+//	Solution().isValid("()");
+//}
 

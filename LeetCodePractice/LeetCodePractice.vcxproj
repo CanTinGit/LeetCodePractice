@@ -117,8 +117,11 @@
     <ClCompile Include="LeetCode_21.cpp" />
     <ClCompile Include="LeetCode_26.cpp" />
     <ClCompile Include="LeetCode_27.cpp" />
+    <ClCompile Include="LeetCode_28.cpp" />
     <ClCompile Include="Leetcode_35.cpp" />
+    <ClCompile Include="LeetCode_38.cpp" />
     <ClCompile Include="LeetCode_53.cpp" />
+    <ClCompile Include="LeetCode_58.cpp" />
     <ClCompile Include="LeetCode_66.cpp" />
     <ClCompile Include="LeetCode_7.cpp" />
     <ClCompile Include="LeetCode_88.cpp" />
